@@ -1,1 +1,1 @@
-![alt text](image.png)
+![alt text](/Collections%20+%20Streams/assets/image.png)
