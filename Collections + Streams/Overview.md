@@ -41,3 +41,12 @@ Transforma o Stream de volta para uma lista.
 
 • Método referência (String::toUpperCase)
 É só um jeito curto de escrever um lambda simples.
+
+    link for more info: https://www.geeksforgeeks.org/java/stream-in-java/
+
+flatMap() V/s map()
+
+map() transforms each element of a stream into another object, resulting in a stream of the same size as the input. It's used for one-to-one transformations.
+flatMap() transforms each element of a stream into zero or more elements, potentially changing the size of the stream. It's used for one-to-many transformations and flattening nested structures. (Para estruturas aninhadas - tipo o nested no elastic)
+
+groupingBy - Agrupa em um map elementos da lista q satisfazem a função passada
