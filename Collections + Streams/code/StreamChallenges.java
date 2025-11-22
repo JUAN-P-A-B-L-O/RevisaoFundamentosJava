@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamChallenges {
@@ -60,19 +61,44 @@ public class StreamChallenges {
         ///
         ///
     public static void main(String[] args) {
-        // 1 exercises
         List<String> names = Arrays.asList("juan", "paulo", "gui", "fernando");
+        List<Integer> numbers = Arrays.asList(2,4,3,5,6,5,7,10);
 
-
+        // 1 exercise
         List<String> upperCaseNames = names.stream()
                 .map(String::toUpperCase)
                 .collect(Collectors.toList());
 
         System.out.println("Exercise 1: " + upperCaseNames);
 
-        // 2 exercises
+        // 2 exercise
 
+        List<String> biggerThan5WordsNames = names.stream()
+                .filter(name -> name.length()> 5 )
+                .collect(Collectors.toList());
 
+        System.out.println("biggerThan5WordsNames: " + biggerThan5WordsNames);
 
+        // 3 exercise
+        List<Integer> onlyPairNumbers = numbers.stream()
+                .filter(number -> number % 2 ==0 )
+                .collect(Collectors.toList());
+
+        System.out.println("onlyPairNumbers: " + onlyPairNumbers);
+
+        // 4 exercise
+
+        Optional<Integer> totalReduced =  numbers.stream()
+                .reduce( ( first,  second) -> first + second );
+
+        if(totalReduced.isPresent()){
+            System.out.println("totalReduced: " + totalReduced.get());
+        }
+
+        // 5 exercise
+        Long countNumbers = numbers.stream()
+                .count();
+
+        System.out.println("countNumbers: " + countNumbers);
     }
 }
