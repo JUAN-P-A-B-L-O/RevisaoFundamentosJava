@@ -27,10 +27,10 @@ public class StreamChallenges {
         /// 9 - Criar um Map onde a chave é o nome em maiúsculo e o valor é o original
         /// .collect(Collectors.toMap(...))
         ///
-        /// Agrupar palavras pela primeira letra
+        /// 10 -Agrupar palavras pela primeira letra
         /// .groupingBy(s -> s.substring(0,1))
         ///
-        /// Agrupar números em PAR vs IMPAR
+        /// 11 -Agrupar números em PAR vs IMPAR
         ///
         /// Criar um Map<String, Long> contando quantas vezes cada palavra aparece
         /// .groupingBy(..., counting())
@@ -59,7 +59,7 @@ public class StreamChallenges {
         ///
         ///
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("Juan", "Paulo", "Gui", "Fernando", "Abel");
+        List<String> names = Arrays.asList("Juan", "Paulo", "Gui", "Fernando", "Abel", "Pedro", "Fábio");
         List<Integer> numbers = Arrays.asList(2,4,2,5,6,5,7,10);
 
         // 1 exercise
@@ -129,6 +129,15 @@ public class StreamChallenges {
         
         // 9 exercise
         Map<String, List<String>> dicUpperCaseNameToNames = names.stream()
-                .collect(Collectors.toMap(name-> name.toString(), names ));
+                .collect(Collectors.toMap(String::toUpperCase, name -> Collections.singletonList(name)));
+
+        System.out.println("dicUpperCaseNameToNames: " + dicUpperCaseNameToNames);
+
+
+        // 10 exercise
+        Map<Character, List<String>> dicByFirstLetter = names.stream()
+                .collect(Collectors.groupingBy(name -> name.charAt(0)));
+
+        System.out.println("dicByFirstLetter: " + dicByFirstLetter);
     }
 }
