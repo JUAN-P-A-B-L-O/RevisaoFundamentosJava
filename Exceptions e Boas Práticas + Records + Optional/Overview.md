@@ -18,3 +18,11 @@ finally sempre roda
 Java nos permite lidar com exceções de subclasses separadamente
 
 mais de uma exception no mesmo catch  } catch (IOException | NumberFormatException e) {
+
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+
+![img_2.png](img_2.png)
