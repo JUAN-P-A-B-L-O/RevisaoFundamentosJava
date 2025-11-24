@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamChallenges {
@@ -61,8 +59,8 @@ public class StreamChallenges {
         ///
         ///
     public static void main(String[] args) {
-        List<String> names = Arrays.asList("juan", "paulo", "gui", "fernando");
-        List<Integer> numbers = Arrays.asList(2,4,3,5,6,5,7,10);
+        List<String> names = Arrays.asList("Juan", "Paulo", "Gui", "Fernando", "Abel");
+        List<Integer> numbers = Arrays.asList(2,4,2,5,6,5,7,10);
 
         // 1 exercise
         List<String> upperCaseNames = names.stream()
@@ -100,5 +98,37 @@ public class StreamChallenges {
                 .count();
 
         System.out.println("countNumbers: " + countNumbers);
+
+        // 6 exercise
+        List<Integer> distinctNumbers = numbers.stream()
+                .distinct()
+                .collect(Collectors.toList());
+
+        System.out.println("distinctNumbers: " + distinctNumbers);
+
+
+
+
+        // 7 Exercise
+
+        Set<Integer> setNumbers = numbers.stream()
+                .collect(Collectors.toSet());
+
+
+        System.out.println("setNumbers: " + setNumbers);
+
+        // 8 exercise
+
+        List<String> sortedAlfabetNames = names.stream()
+                .sorted((name1, name2) -> name1.compareTo(name2))
+                .collect(Collectors.toList());
+
+        System.out.println("sortedAlfabetNames: "+ sortedAlfabetNames);
+        
+        /// Nível 2 — Intermediário
+        
+        // 9 exercise
+        Map<String, List<String>> dicUpperCaseNameToNames = names.stream()
+                .collect(Collectors.toMap(name-> name.toString(), names ));
     }
 }
