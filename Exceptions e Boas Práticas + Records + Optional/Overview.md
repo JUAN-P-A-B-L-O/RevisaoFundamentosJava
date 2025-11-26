@@ -26,3 +26,14 @@ mais de uma exception no mesmo catch  } catch (IOException | NumberFormatExcepti
 
 
 ![img_2.png](img_2.png)
+
+
+ --------- optional
+ 
+optional is a abstration to use in moments that you dont know if the variable is null/undefied or not. Like an api call
+- pode ser usado metodos para stream(tipo map e outros)
+- User user = repository.findById(id)
+  .orElseThrow(() -> new BusinessException("User not found"));
+
+
+
