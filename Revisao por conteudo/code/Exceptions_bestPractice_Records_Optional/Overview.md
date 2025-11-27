@@ -36,4 +36,12 @@ optional is a abstration to use in moments that you dont know if the variable is
   .orElseThrow(() -> new BusinessException("User not found"));
 
 
+ ---------- Records
+
+java 14 Feature - To simplified a simple classe creation
+ - Tipo um dto classe normal só q porem muito mais simples e rapido de criar
+
+exemplo utilizando como padrao DTO
+
+![img_3.png](img_3.png)
 

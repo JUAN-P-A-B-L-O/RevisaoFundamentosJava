@@ -1,5 +1,4 @@
-import java.util.*;
-import java.util.stream.Collectors;
+package Exceptions_bestPractice_Records_Optional;
 
 public class ExceptionUseCases {
         /// 🟦 Nível 1 — Básico (Aquecimento)

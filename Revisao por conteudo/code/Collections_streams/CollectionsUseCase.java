@@ -1,3 +1,5 @@
+package Collections_streams;
+
 import java.util.*;
 
 public class CollectionsUseCase {
