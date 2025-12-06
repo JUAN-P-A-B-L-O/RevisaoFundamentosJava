@@ -3,8 +3,8 @@ package Exceptions_bestPractice_Records_Optional;
 public class OptionalUseCases {
 
     public static void main(String[] args) {
-        PersonRecords personRecords = new PersonRecords("s2131231231");
+        PersonRecords personRecords = new PersonRecords("s2131231231", "Juan", 24);
 
-        System.out.println(personRecords.cpf());
+        System.out.println(personRecords);
     }
 }
